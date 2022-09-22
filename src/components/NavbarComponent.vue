@@ -1,5 +1,5 @@
 <template>
-    <nav :class="navbarClass">
+    <nav :class="'navbar ' + navbarClass">
         <ul class="navbar-list">
             <figure @mousedown="navHidden = !navHidden">
                 <i :class="iClass"></i>
@@ -8,11 +8,11 @@
                 v-for="(option, index) in navOptions" 
                 :key="'nav-'+index"
                 class="navbar-element"
-                :style="{'backgroundColor': (hoverIndex === i ? '#323742' : '') }"
+                :style="{'backgroundColor': (hoverIndex === index ? '#323742' : '') }"
                 @mouseover="hoverIndex = index"
                 @mouseleave="hoverIndex = -1"
             >
-                {{option.text}}
+                <span class="navbar-link">{{option.text}}</span>
             </li>
         </ul>
     </nav>
@@ -51,6 +51,18 @@ export default {
             navOptions: navOptions
         })
     },
+    mounted() {
+        window.addEventListener("scroll", this.onScroll)
+    },
+    methods: {
+        onScroll() {
+            if(window.top.scrollY > 140) {
+                this.navTran = true;
+            } else {
+                this.navTran = false;
+            }
+        }
+    },
     computed: {
         navbarClass() {
             return (this.navHidden ? "navbar-hidden " : "") +  (this.navTran ? "navbar-transparent" : "");
@@ -63,7 +75,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 
 .navbar {
 
@@ -127,7 +138,6 @@ export default {
         color: white;
         text-decoration: none;
         padding: 5px;
-
     }
 }
 
