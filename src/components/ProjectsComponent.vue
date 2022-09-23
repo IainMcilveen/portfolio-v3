@@ -120,17 +120,17 @@ export default {
         margin: auto;
         width: 95vw;
 
-        display: grid;
-        grid-template-columns: repeat(auto-fit, 390px);
-        grid-column-gap: 0.5em;
-        grid-row-gap: 0.5em;
-        grid-auto-rows: 550px;
+        display: flex;
+        flex-wrap: wrap;
 
         justify-content: center;
         
         .Project-Box{
 
             transition: 300ms ease all;
+
+            width: 500px;
+            height: 500px;
 
             background-color: $bgLight;
             border-radius: 2px;
@@ -187,9 +187,9 @@ export default {
         }
 
         .Project-Box:hover{
-            position: relative;
-            z-index: 0;
-            box-shadow: 6px 6px 3px #3f434b;
+            width: 505px;
+            height: 505px;
+            box-shadow: 0 5px 5px $bgMid;
         }
 
     }
@@ -201,12 +201,10 @@ export default {
     .App-Projects{
     
         .Projects-All{
-    
-            grid-template-columns: repeat(auto-fit, 340px);
-            grid-row-gap: 0.1em;
 
             .Project-Box{
                 margin: 0.5em 1em 0.5em 1em;
+                height: 600px;
             }
         }
     }

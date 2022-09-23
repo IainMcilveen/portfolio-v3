@@ -8,7 +8,7 @@
             <div class="Experience-Info">
                 <div class="Experience-Title">
                     <h2>{{exp.title}}</h2>
-                    <h4 id="subtitle">{{exp.subtitle}}</h4>
+                    <h4>{{exp.subtitle}}</h4>
                 </div>
                 <h4>{{exp.time}}</h4>
                 <p>{{exp.text}}</p>
@@ -114,7 +114,7 @@ export default {
         text-align: left;
 
         width: 85vw;
-        height: 325px;
+        height: 270px;
 
         box-shadow: 0 3px 3px $bgDark;
         border-radius: 0.15em;
@@ -123,10 +123,23 @@ export default {
 
             display:flex;
             flex-direction: column;
-            justify-content: center;
             
-            h2,h4{
-                margin-bottom: 0;
+            .Experiences-Title {
+                margin-top: 10px;
+            }
+            
+            h2{
+                margin: 0;
+                margin-bottom: 5px;
+            }
+
+            h4 {
+                margin: 0;
+            }
+
+            p {
+                margin: 0;
+                margin-top: 10px;
             }
 
             #subtitle{
@@ -134,9 +147,6 @@ export default {
                 text-align: left;
             }
 
-            h2,h4,p{
-                margin-right: 10px;
-            }
 
             width: 50%;
             margin-left: 10px;
@@ -149,8 +159,6 @@ export default {
 
             padding: 10px;
             padding-left: 0px;
-
-            
             
             width: 50%;
 
@@ -167,6 +175,7 @@ export default {
     .Experience-Box:hover{
         box-shadow: 0 7px 7px $bgDark;
         width: calc(85vw + 5px);
+        height: 275px;
     }
 
     .flipped{
@@ -200,14 +209,31 @@ export default {
 
         .Experience-Box{
             
-            width: 98vw;
-            height: 625px;
+            width: 95vw;
+            height: 520px;
+
+            display: block;
 
             .Experience-Info{
 
                 padding: 3px;
+                margin: 0;
+                
                 align-items: center;
-            
+                width: 100%;
+
+                p,h4,h2 {
+                    margin: 5px;
+                    
+                }
+
+                h2, h4 {
+                    text-align: center;
+                }
+
+                h4 {
+                    margin: 0;
+                }
             }
             
             .Experience-Image{
@@ -216,7 +242,7 @@ export default {
                 flex-direction: column;
                 justify-content: center;
 
-                width:55vw;
+                width:100%;
                 padding: 3px;
 
                 img{

@@ -58,17 +58,19 @@ export default {
     }
     .Photography-photos{
         
-        width: 90%;
+        width: 95vw;
         margin: auto;
 
-        display: grid;
-        grid-template-columns: repeat(auto-fit, 49%);
-        grid-column-gap: 0.4em;
-        grid-row-gap: 0.4em;
+        display: flex;
+        flex-wrap: wrap;
 
         justify-content: center;
         
         .Photo-Box{
+
+            width: 44vw;
+            padding: 8px;
+
             img{
                 border-radius: 1px;
                 width: 100%;
@@ -87,7 +89,15 @@ export default {
             }
         }
         .Photography-photos{
-            grid-template-columns: repeat(auto-fit, 95vw);
+            
+            width: 99vw;
+
+            .Photo-Box {
+                width: 100%;
+                padding: 0;
+                padding: 0 5px 5px 5px;
+            }
+
         }
     }
 }

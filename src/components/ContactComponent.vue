@@ -1,13 +1,16 @@
 <template>
     <section id="Contact"></section>
-    <div className="App-Contact" id="#Contact">
-        <div className="Contact-Title">
+    <div class="App-Contact" id="#Contact">
+        <div class="Contact-Title">
             <h1>Contact Me</h1>
         </div>
-        <div className="Contact-Links">
+        <div class="Contact-Links">
             <a href="https://github.com/IainMcilveen"><font-awesome-icon icon="fa-brands fa-github" /></a>
             <a href="https://www.linkedin.com/in/iain-mcilveen-64b14a185/"><font-awesome-icon icon="fa-brands fa-linkedin" /></a>
             <a href="https://drive.google.com/file/d/1vc3YE8QbbwAOsMwPRsMMc-kPIpJYF0Pa/view?usp=sharing"><font-awesome-icon icon="fa-scroll" /></a>
+        </div>
+        <div class="Contact-Copyright">
+            <p>© 2022 by Iain Mcilveen</p>
         </div>
     </div>
 </template>
@@ -38,6 +41,17 @@ export default {
             padding: 25px;
             font-size: 3em;
             color: black;
+        }
+    }
+
+    .Contact-Copyright {
+        padding: 10px;
+        padding-top: 15px;
+        font-size: 0.85em;
+
+        p {
+            padding: 0;
+            margin: 0;
         }
     }
     
