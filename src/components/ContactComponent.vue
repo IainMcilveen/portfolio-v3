@@ -1,4 +1,5 @@
 <template>
+    <section id="Contact"></section>
     <div className="App-Contact" id="#Contact">
         <div className="Contact-Title">
             <h1>Contact Me</h1>

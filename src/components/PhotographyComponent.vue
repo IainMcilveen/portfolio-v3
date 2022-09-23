@@ -1,4 +1,5 @@
 <template>
+    <section id="Photography"></section>
     <div class="App-Photography" id="#Photography">
         <div class="Photography-Header">
             <h1>My Photography</h1>

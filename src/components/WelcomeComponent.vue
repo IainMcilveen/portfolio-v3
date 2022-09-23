@@ -1,5 +1,5 @@
 <template>
-    <div class="App-Welcome" id="#Top">
+    <div class="App-Welcome" id="Top">
         <img class="Welcome-Image" alt="background" :src="bgImg" />
         <div class="Welcome-Tran"></div>
         <div class="Welcome">

@@ -1,24 +1,25 @@
 <template>
-<div class="App-main" id="#About">
-    <div class="About">
-        <div class="profile">
-            <img :src="profile" alt="nope" />
-        </div>
-        <div class="intro">
-            <div class="introText">
-                <h1>Hi! I'm Iain</h1>
-                <hr/>
-                <p>I am an aspiring software developer and full time student in my fourth year at Carleton University studying computer science. I am passionate about all things computer science and enjoy learning new things.</p>
-                <p>I'm currently seeking a full time position starting summer 2023!</p>
-            </div>
-            <div class="resume">
-                <a href="https://drive.google.com/file/d/1vc3YE8QbbwAOsMwPRsMMc-kPIpJYF0Pa/view?usp=sharing">Resume</a>
-                <a href="https://github.com/IainMcilveen">GitHub</a>
-                <a href="https://www.linkedin.com/in/iain-mcilveen-64b14a185/">Linkedin</a>
-            </div>
-        </div>
-    </div>
-</div>
+	<section id="About"></section>
+	<div class="App-main" id="#About">
+		<div class="About">
+			<div class="profile">
+				<img :src="profile" alt="nope" />
+			</div>
+			<div class="intro">
+				<div class="introText">
+					<h1>Hi! I'm Iain</h1>
+					<hr/>
+					<p>I am an aspiring software developer and full time student in my fourth year at Carleton University studying computer science. I am passionate about all things computer science and enjoy learning new things.</p>
+					<p>I'm currently seeking a full time position starting summer 2023!</p>
+				</div>
+				<div class="resume">
+					<a href="https://drive.google.com/file/d/1vc3YE8QbbwAOsMwPRsMMc-kPIpJYF0Pa/view?usp=sharing">Resume</a>
+					<a href="https://github.com/IainMcilveen">GitHub</a>
+					<a href="https://www.linkedin.com/in/iain-mcilveen-64b14a185/">Linkedin</a>
+				</div>
+			</div>
+		</div>
+	</div>
 </template>
 
 <script>

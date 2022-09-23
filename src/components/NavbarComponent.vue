@@ -12,7 +12,8 @@
                 @mouseover="hoverIndex = index"
                 @mouseleave="hoverIndex = -1"
             >
-                <span class="navbar-link">{{option.text}}</span>
+                <a v-if="option.text == 'About'" class="navbar-link" :href="option.loc" v-smooth-scroll={offset:-100}>{{option.text}}</a>
+                <a v-else class="navbar-link" :href="option.loc" v-smooth-scroll>{{option.text}}</a>
             </li>
         </ul>
     </nav>

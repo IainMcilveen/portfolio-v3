@@ -1,4 +1,5 @@
 <template>
+    <section id="Projects"></section>
     <div class="App-Projects" id="#Projects">
         <div class="Projects-Title">
             <h1>My Projects</h1>
