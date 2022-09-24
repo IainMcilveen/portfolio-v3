@@ -35,12 +35,22 @@ export default {
 .App-Contact{
 
     text-align: center;
+    background-color: $bgDark;
+
+    color: white;
+
+    .Contact-Title {
+        h1 {
+            padding: 10px 0 8px 0;
+            margin: 0;
+        }
+    }
 
     .Contact-Links{
         a{
             padding: 25px;
             font-size: 3em;
-            color: black;
+            color: white;
         }
     }
 
