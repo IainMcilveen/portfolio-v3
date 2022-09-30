@@ -10,5 +10,5 @@ module.exports = defineConfig({
       }
     }
   },
-  publicPath: "/portfolio-v3/"
+  publicPath: "/"
 })
