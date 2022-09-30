@@ -230,6 +230,8 @@ export default {
 
 }
 
+$mobile-height: 560px;
+
 @media screen and (max-width: 640px){
 
     .App-Experiences{
@@ -237,9 +239,10 @@ export default {
         .Experience-Box{
             
             width: 95vw;
-            height: 520px;
+            height: $mobile-height;
 
             display: block;
+            overflow: hidden;
 
             .Experience-Info{
 
@@ -258,9 +261,19 @@ export default {
                     text-align: center;
                 }
 
+                h2{
+                    font-size: 1.3em;
+                }
+
                 h4 {
                     margin: 0;
+                    font-size: 0.9em;
                 }
+
+                p {
+                    font-size: 0.95em;
+                }
+
             }
             
             .Experience-Image{
@@ -273,8 +286,8 @@ export default {
                 padding: 3px;
 
                 img{
-                    object-fit: cover;
-                    width:100%;
+                    object-fit: scale-down;
+                    width:99%;
                     height: 100%;
                    
                 }
@@ -283,7 +296,8 @@ export default {
         }
 
         .Experience-Box:hover{
-            width: calc(98vw + 3px);
+            height: calc( #{$mobile-height} + 5px);
+            width: 95vw;
         }
     }
 }

@@ -100,7 +100,7 @@ let projectData = [
         text: "This is a in-progess game being written from scratch in Java using AWT, currently the player can walk around and explore the world and can naviagate to different procedurally generated screens."
     },
     {
-        url: "https://github.com/IainMcilveen/portfolio-react",
+        url: "https://github.com/IainMcilveen/portfolio-v3",
         img: "https://cdn.discordapp.com/attachments/665849154186248202/754843218356731954/unknown.png",
         img_loaded: false,
         title: "Portfolio",
@@ -159,7 +159,7 @@ export default {
             transition: 300ms ease all;
 
             width: 500px;
-            height: 500px;
+            height: 450px;
 
             background-color: $bgLight;
             border-radius: 2px;
@@ -223,7 +223,7 @@ export default {
 
         .Project-Box:hover{
             width: 505px;
-            height: 505px;
+            height: 455px;
             box-shadow: 0 5px 5px $bgMid;
         }
 
@@ -231,15 +231,33 @@ export default {
     
 }
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 440px){
+
+    $mobile-height: 450px;
     
     .App-Projects{
     
         .Projects-All{
 
+            width: 99vw;
+
             .Project-Box{
-                margin: 0.5em 1em 0.5em 1em;
-                height: 600px;
+                margin: 0.5em 0.3em 0.5em 0.3em;
+                height: $mobile-height;
+
+                .Project-Image{
+    
+                    height: 30%;
+                    width: 100%;
+        
+                }
+
+            }
+
+            .Project-Box:hover{
+                
+                height: calc(#{$mobile-height} + 5px);
+                box-shadow: 0 5px 5px $bgMid;
             }
         }
     }
