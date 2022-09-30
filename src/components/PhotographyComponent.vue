@@ -6,21 +6,51 @@
             <p>In my spare time I enjoy going out and taking pictures of the various places around me. It is a good way to relax and gets me to go outside and enjoy some of the great scenery around where ever I am at the time. Here are a few of my favourite photos which I have taken.</p>
         </div>
         <div class="Photography-photos">
-            <div v-for="(photo, index) in photoArray" class="Photo-Box" :key="'photo-'+index">
-                <a :href="photo"><img :src="photo" alt="oops" /></a>
+            <div v-for="(photoObj, index) in photoArray" class="Photo-Box" :key="'photo-'+index">
+                <a v-cloak :href="photoObj.img">
+                    <img v-show="photoObj.loaded" :src="photoObj.img" @load="setLoaded(index)" alt="oops" />
+                    <div class="img-loading" v-show="!photoObj.loaded">
+                        <font-awesome-icon class="load-icon" icon="fa-solid fa-spinner" />
+                    </div>
+                </a>
             </div>
         </div>
     </div>
 </template>
 
 <script>
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faSpinner } from '@fortawesome/free-solid-svg-icons';
+
+// configure FontAwesome
+library.add(faSpinner);
+
+
 let photoArray = [
-    "https://cdn.discordapp.com/attachments/665849154186248202/794298932721090590/IMG_0039.jpg",
-    "https://cdn.discordapp.com/attachments/665849154186248202/794298947744169994/IMG_0251.jpg",
-    "https://cdn.discordapp.com/attachments/665849154186248202/794298962914836500/IMG_8236.jpg",
-    "https://cdn.discordapp.com/attachments/665849154186248202/794298982876184613/IMG_9056.jpg",
-    "https://cdn.discordapp.com/attachments/665849154186248202/794298987108368394/IMG_8620.jpg",
-    "https://cdn.discordapp.com/attachments/665849154186248202/794298994523897856/IMG_9138.jpg",
+    {
+        img: "https://cdn.discordapp.com/attachments/665849154186248202/794298932721090590/IMG_0039.jpg",
+        loaded: false
+    },
+    {
+        img: "https://cdn.discordapp.com/attachments/665849154186248202/794298947744169994/IMG_0251.jpg",
+        loaded: false
+    },
+    {
+        img: "https://cdn.discordapp.com/attachments/665849154186248202/794298962914836500/IMG_8236.jpg",
+        loaded: false
+    },
+    {
+        img: "https://cdn.discordapp.com/attachments/665849154186248202/794298982876184613/IMG_9056.jpg",
+        loaded: false
+    },
+    {
+        img: "https://cdn.discordapp.com/attachments/665849154186248202/794298987108368394/IMG_8620.jpg",
+        loaded: false
+    },
+    {
+        img: "https://cdn.discordapp.com/attachments/665849154186248202/794298994523897856/IMG_9138.jpg",
+        loaded: false
+    },
 ];
 
 export default {
@@ -29,6 +59,13 @@ export default {
         return({
             photoArray: photoArray
         })
+    },
+    methods: {
+        setLoaded(index) {
+            let temp = {...photoArray[index]};
+            temp.loaded = true;
+            this.photoArray.splice(index, 1, temp);
+        }
     }
 }
 </script>
@@ -70,12 +107,22 @@ export default {
 
             width: 44vw;
             padding: 8px;
+            margin: 0;
+
+            display: flex;
 
             img{
                 border-radius: 1px;
                 width: 100%;
-                height: 100%
+                height: 100%;
             }
+
+            .img-loading {
+                border-radius: 1px;
+                width: 44vw;
+                height: calc(2/3 * 44vw);
+            }
+
         }
     }
     padding-bottom: 25px;

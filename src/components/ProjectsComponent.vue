@@ -7,8 +7,16 @@
         <div class="Projects-All">
             <div v-for="(proj, index) in projectData" class="Project-Box" :key="'project-'+index">
                 <div class="Project-Image">
-                    <a v-if="proj.url !== ''" :href="proj.url"> <img :src="proj.img" alt="project" /></a>
-                    <img v-else :src="proj.img" alt="project" />
+                    <a v-if="proj.url !== ''" :href="proj.url"> 
+                        <img v-show="proj.img_loaded" :src="proj.img" @load="setLoaded(index)" />
+                        <div class="img-loading" v-show="!proj.img_loaded">
+                            <font-awesome-icon class="load-icon" icon="fa-solid fa-spinner" />
+                        </div>
+                    </a>
+                    <img v-if="proj.url == ''" v-show="proj.img_loaded" :src="proj.img" @load="setLoaded(index)" />
+                    <div v-if="proj.url == ''" class="img-loading" v-show="!proj.img_loaded">
+                        <font-awesome-icon class="load-icon" icon="fa-solid fa-spinner" />
+                    </div>
                 </div>
                 <div class="Project-Title">
                     <a v-if="proj.url !== ''" :href="proj.url"><h4>{{proj.title}}</h4></a>
@@ -24,10 +32,17 @@
 </template>
 
 <script>
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faSpinner } from '@fortawesome/free-solid-svg-icons';
+
+// configure FontAwesome
+library.add(faSpinner);
+
 let projectData = [
     {
         url: "https://github.com/IainMcilveen",
         img: "https://cdn.discordapp.com/attachments/665849154186248202/1022643569699332207/ai.png",
+        img_loaded: false,
         title: "Better Basket",
         desc: "Algorithms",
         text: "This program is the final group project for COMP 3106, I was primarily responsible for the implementation of A* and had to design the heuristic which would best optimize distance while factoring in the cost of products at each store. We used data scraped from UberEats and Time-Distance Matrix API from OpenRouteService.org"
@@ -35,6 +50,7 @@ let projectData = [
     {
         url: "https://github.com/IainMcilveen/comp3005pg",
         img: "https://cdn.discordapp.com/attachments/665849154186248202/754853854108975244/unknown.png",
+        img_loaded: false,
         title: "COMP 3005 Database Project",
         desc: "Web Application",
         date: "April 2020",
@@ -43,6 +59,7 @@ let projectData = [
     {
         url: "https://github.com/IainMcilveen/Whos-That-Pokemon",
         img: "https://cdn.discordapp.com/attachments/665849154186248202/754850059824267344/unknown.png",
+        img_loaded: false,
         title: "Who's That Pokemon",
         desc: "Mobile Web Application",
         date: "January 2020",
@@ -51,6 +68,7 @@ let projectData = [
     {
         url: "https://github.com/IainMcilveen/pathfinding-visualizer",
         img: "https://cdn.discordapp.com/attachments/665849154186248202/754846093556187216/pathfinding-vis-gif.gif",
+        img_loaded: false,
         title: "Pathfinding visualizer",
         desc: "Algorithms",
         date: "July 2020",
@@ -59,6 +77,7 @@ let projectData = [
     {
         url: "https://github.com/IainMcilveen/termtris",
         img: "https://cdn.discordapp.com/attachments/665849154186248202/935680885414572122/termtris_cropped.gif",
+        img_loaded: false,
         title: "TermTris",
         desc: "Terminal Application",
         text: "This is a program written in C, which allows you to play a simple version of tetris from the convience of your terminal. I used ncurses to draw the game within the terminal."
@@ -66,6 +85,7 @@ let projectData = [
     {
         url: "https://github.com/IainMcilveen",
         img: "https://cdn.discordapp.com/attachments/665849154186248202/1022640579009577060/device.png",
+        img_loaded: false,
         title: "MCT Device Simulator",
         desc: "Desktop Application",
         text: "This program is my final project does in a group for COMP 3004: Object-Oriented Software Engineering and was written in C++ using QT. It Simulates the user interface as well as various features of the DENAS PCM6 Electroneurostimulation device."
@@ -73,6 +93,7 @@ let projectData = [
     {
         url: "https://github.com/IainMcilveen/GridWorld",
         img: "https://cdn.discordapp.com/attachments/665849154186248202/758103143606386688/gridworld.gif",
+        img_loaded: false,
         title: "Grid World",
         desc: "Game",
         date: "October 2019",
@@ -81,6 +102,7 @@ let projectData = [
     {
         url: "https://github.com/IainMcilveen/portfolio-react",
         img: "https://cdn.discordapp.com/attachments/665849154186248202/754843218356731954/unknown.png",
+        img_loaded: false,
         title: "Portfolio",
         desc: "Web Application",
         date: "September 2020",
@@ -94,6 +116,13 @@ export default {
         return({
             projectData: projectData,
         })
+    },
+    methods: {
+        setLoaded(index) {
+            let temp = {...projectData[index]};
+            temp.img_loaded = true;
+            this.projectData.splice(index, 1, temp);
+        }
     }
 }
 </script>
@@ -144,9 +173,15 @@ export default {
             .Project-Image{
     
                 height: 50%;
+                width: 100%;
     
                 img{
                     object-fit:cover;
+                    width: 100%;
+                    height: 100%;
+                }
+
+                .img-loading {
                     width: 100%;
                     height: 100%;
                 }
