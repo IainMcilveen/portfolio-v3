@@ -10,6 +10,7 @@ cd dist
 
 # if you are deploying to a custom domain
 git init
-git add -Agit commit -m 'deploy'
+git add -A
+git commit -m 'deploy'
 git push -f git@github.com:IainMcilveen/portfolio-v3.git master:gh-pages
 cd -
