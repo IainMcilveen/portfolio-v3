@@ -114,7 +114,7 @@ export default {
     color: $bgLight;
 }
 
-@media screen and (max-width: 759px) {
+@media screen and (max-width: 850px) {
 	.App-main{
 
 		height: 105vh;
@@ -133,6 +133,10 @@ export default {
 				padding: 0;
 				width: 75vw;
 				height: 75vw;
+
+				display: flex;
+				justify-content: center;
+
 				img{
 					object-fit: cover;
 					max-width: 475px;
