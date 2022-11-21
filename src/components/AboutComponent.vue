@@ -13,7 +13,7 @@
 					<p>I'm currently seeking a full time position starting summer 2023!</p>
 				</div>
 				<div class="resume">
-					<a href="https://drive.google.com/file/d/1vc3YE8QbbwAOsMwPRsMMc-kPIpJYF0Pa/view?usp=sharing">Resume</a>
+					<a href="https://drive.google.com/file/d/1P-3NAXoleGS5Vkq5UAQbExlAARSXi4PA/view?usp=share_link">Resume</a>
 					<a href="https://github.com/IainMcilveen">GitHub</a>
 					<a href="https://www.linkedin.com/in/iain-mcilveen-64b14a185/">Linkedin</a>
 				</div>
