@@ -18,7 +18,7 @@
             <p>{{optionArray[selectedOption].description}}</p>
         </div>
         <div class="Photography-photos">
-            <div v-for="(index) in optionArray[selectedOption].pics" class="Photo-Box" :key="'photo-'+index">
+            <div v-for="(index) in optionArray[selectedOption].pics" :class="'Photo-Box ' +photoArray[index].type" :key="'photo-'+index">
                 <a v-cloak :href="photoArray[index].img">
                     <img v-show="photoArray[index].loaded" :src="photoArray[index].img" @load="setLoaded(index)" alt="oops" />
                     <div class="img-loading" v-show="!photoArray[index].loaded">
@@ -41,46 +41,152 @@ library.add(faSpinner);
 
 let optionArray = [
     {
-        pics: [0,1,2,3,4,5],
+        pics: [8,9,10,11,12,13,14,15],
         description: "In my spare time I enjoy going out and taking pictures of the various places around me. It is a good way to relax and gets me to go outside and enjoy some of the great scenery around where ever I am at the time. Here are a few of my favourite photos which I have taken.",
         title: "Photography"
     },
     {
-        pics: [3,4,5],
+        pics: [16,17,18,19,20,21,22,23,24],
         description: "Film photography is based or something",
         title: "Film"
     },
     {
-        pics: [0,1,2],
+        pics: [0,1,2,3,4,5,6,7,25],
         description: "Powershots are based moment",
         title: "Point and Shoot"
     }
 ];
 
 let photoArray = [{
-    img: "https://cdn.discordapp.com/attachments/665849154186248202/794298932721090590/IMG_0039.jpg",
-    loaded: false
+    img: "https://cdn.discordapp.com/attachments/665849154186248202/1088542618197184632/IMG_1745.jpg",
+    loaded: false,
+    type: "portrait"
 },
 {
-    img: "https://cdn.discordapp.com/attachments/665849154186248202/794298947744169994/IMG_0251.jpg",
-    loaded: false
+    img: "https://cdn.discordapp.com/attachments/665849154186248202/1088542618423672903/IMG_1794.jpg",
+    loaded: false,
+    type: "portrait"
 },
 {
-    img: "https://cdn.discordapp.com/attachments/665849154186248202/794298962914836500/IMG_8236.jpg",
-    loaded: false
+    img: "https://cdn.discordapp.com/attachments/665849154186248202/1088542618943750154/IMG_1808.jpg",
+    loaded: false,
+    type: "portrait"
 },
 {
-    img: "https://cdn.discordapp.com/attachments/665849154186248202/794298982876184613/IMG_9056.jpg",
-    loaded: false
+    img: "https://cdn.discordapp.com/attachments/665849154186248202/1088542619350618193/IMG_1810.jpg",
+    loaded: false,
+    type: "portrait"
 },
 {
-    img: "https://cdn.discordapp.com/attachments/665849154186248202/794298987108368394/IMG_8620.jpg",
-    loaded: false
+    img: "https://cdn.discordapp.com/attachments/665849154186248202/1088542619619049574/IMG_1522.jpg",
+    loaded: false,
+    type: "portrait"
 },
 {
-    img: "https://cdn.discordapp.com/attachments/665849154186248202/794298994523897856/IMG_9138.jpg",
-    loaded: false
-}]
+    img: "https://cdn.discordapp.com/attachments/665849154186248202/1088542619824553995/IMG_1544.jpg",
+    loaded: false,
+    type: "portrait"
+},
+{
+    img: "https://cdn.discordapp.com/attachments/665849154186248202/1088542620155920414/IMG_1708.jpg",
+    loaded: false,
+    type: "portrait"
+},
+{
+    img: "https://cdn.discordapp.com/attachments/665849154186248202/1088542620478865479/IMG_1709.jpg",
+    loaded: false,
+    type: "portrait"
+},
+{
+    img: "https://cdn.discordapp.com/attachments/665849154186248202/1088542646840070176/IMG_1385.jpg",
+    loaded: false,
+    type: "landscape"
+},
+{
+    img: "https://cdn.discordapp.com/attachments/665849154186248202/1088542647217569842/IMG_8236.jpg",
+    loaded: false,
+    type: "landscape"
+},
+{
+    img: "https://cdn.discordapp.com/attachments/665849154186248202/1088542647687336018/IMG_8620.jpg",
+    loaded: false,
+    type: "landscape"
+},
+{
+    img: "https://cdn.discordapp.com/attachments/665849154186248202/1088542647980920942/IMG_9056.jpg",
+    loaded: false,
+    type: "landscape"
+},
+{
+    img: "https://cdn.discordapp.com/attachments/665849154186248202/1088542648387780749/IMG_9138.jpg",
+    loaded: false,
+    type: "landscape"
+},
+{
+    img: "https://cdn.discordapp.com/attachments/665849154186248202/1088542648803020910/IMG_0039.jpg",
+    loaded: false,
+    type: "landscape"
+},
+{
+    img: "https://cdn.discordapp.com/attachments/665849154186248202/1088542649151143996/IMG_0251.jpg",
+    loaded: false,
+    type: "landscape"
+},
+{
+    img: "https://cdn.discordapp.com/attachments/665849154186248202/1088542649499275294/IMG_0372.jpg",
+    loaded: false,
+    type: "landscape"
+},
+{
+    img: "https://cdn.discordapp.com/attachments/665849154186248202/1088542673671028776/img010.jpg",
+    loaded: false,
+    type: "portrait"
+},
+{
+    img: "https://cdn.discordapp.com/attachments/665849154186248202/1088542674082078760/img014.jpg",
+    loaded: false,
+    type: "portrait"
+},
+{
+    img: "https://cdn.discordapp.com/attachments/665849154186248202/1088542674388258927/img017.jpg",
+    loaded: false,
+    type: "portrait"
+},
+{
+    img: "https://cdn.discordapp.com/attachments/665849154186248202/1088542674727993414/img018.jpg",
+    loaded: false,
+    type: "portrait"
+},
+{
+    img: "https://cdn.discordapp.com/attachments/665849154186248202/1088542675264868453/img024-2.jpg",
+    loaded: false,
+    type: "portrait"
+},
+{
+    img: "https://cdn.discordapp.com/attachments/665849154186248202/1088542675642359877/img003.jpg",
+    loaded: false,
+    type: "portrait"
+},
+{
+    img: "https://cdn.discordapp.com/attachments/665849154186248202/1088542676107923506/img006.jpg",
+    loaded: false,
+    type: "portrait"
+},
+{
+    img: "https://cdn.discordapp.com/attachments/665849154186248202/1088542676468629575/img008.jpg",
+    loaded: false,
+    type: "portrait"
+},
+{
+    img: "https://cdn.discordapp.com/attachments/665849154186248202/1088542676745461870/img009.jpg",
+    loaded: false,
+    type: "portrait"
+},
+{
+    img: "https://cdn.discordapp.com/attachments/665849154186248202/1088554711977828362/IMG_1501.jpg",
+    loaded: false,
+    type: "portrait"
+}];
 
 export default {
     name: 'PhotographyComponent',
@@ -179,8 +285,6 @@ export default {
         justify-content: center;
         
         .Photo-Box{
-
-            width: 44vw;
             padding: 8px;
             margin: 0;
 
@@ -190,6 +294,7 @@ export default {
                 border-radius: 1px;
                 width: 100%;
                 height: 100%;
+                
             }
 
             .img-loading {
@@ -198,6 +303,19 @@ export default {
                 height: calc(2/3 * 44vw);
             }
 
+        }
+
+        .Photo-Box.landscape {
+            width: 44vw;
+            img {
+                aspect-ratio: 3/2;
+            }
+        }
+        .Photo-Box.portrait {
+            height: 88vh;
+            img {
+                aspect-ratio: 2/3;
+            }
         }
     }
     padding-bottom: 25px;
@@ -222,10 +340,11 @@ export default {
             
             width: 99vw;
 
-            .Photo-Box {
-                width: 100%;
-                padding: 0;
-                padding: 0 5px 5px 5px;
+            .Photo-Box.landscape {
+                width: 98vw;
+                img {
+                    aspect-ratio: 3/2;
+                }
             }
 
         }
