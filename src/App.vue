@@ -4,7 +4,7 @@
 	<about-component />
 	<experiences-component />
 	<projects-component />
-	<photography-component />
+	<!--<photography-component />-->
 	<contact-component />
 	<a :class="linkClass" href="#Welcome" v-smooth-scroll><figure class="return-top"></figure></a>
 </template>
@@ -15,7 +15,7 @@ import WelcomeComponent from './components/WelcomeComponent.vue'
 import AboutComponent from './components/AboutComponent.vue'
 import ExperiencesComponent from './components/ExperiencesComponent.vue'
 import ProjectsComponent from './components/ProjectsComponent.vue'
-import PhotographyComponent from './components/PhotographyComponent.vue'
+//import PhotographyComponent from './components/PhotographyComponent.vue'
 import ContactComponent from './components/ContactComponent.vue'
 
 export default {
@@ -26,7 +26,7 @@ export default {
 		AboutComponent,
 		ExperiencesComponent,
 		ProjectsComponent,
-		PhotographyComponent,
+		//PhotographyComponent,
 		ContactComponent,
 	},
 	data() {

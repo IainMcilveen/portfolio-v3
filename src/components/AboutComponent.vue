@@ -9,8 +9,7 @@
 				<div class="introText">
 					<h1>Hi! I'm Iain</h1>
 					<hr/>
-					<p>I am an aspiring software developer and full time student in my final year at Carleton University studying computer science. I am passionate about all things computer science and enjoy learning new things.</p>
-					<p>I'm currently seeking a full time position starting summer 2023!</p>
+					<p>I am a Full Stack Developer currently working at Chartd! I am passionate about all things computer science and enjoy learning new things.</p>
 				</div>
 				<div class="resume">
 					<a href="https://drive.google.com/file/d/1P-3NAXoleGS5Vkq5UAQbExlAARSXi4PA/view?usp=share_link">Resume</a>

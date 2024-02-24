@@ -34,6 +34,14 @@
 <script>
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faSpinner } from '@fortawesome/free-solid-svg-icons';
+import betterbasket from '../img/projects/betterbasket.png';
+import database from '../img/projects/database.png';
+import gridworld from '../img/projects/gridworld.gif';
+import mctdevice from '../img/projects/mctdevice.png';
+import pathfinding from '../img/projects/pathfinding.gif';
+import pokemon from '../img/projects/pokemon.png';
+import termtris from '../img/projects/termtris.gif';
+import portfolio from '../img/projects/portfolio.png';
 
 // configure FontAwesome
 library.add(faSpinner);
@@ -41,7 +49,7 @@ library.add(faSpinner);
 let projectData = [
     {
         url: "https://github.com/IainMcilveen",
-        img: "https://cdn.discordapp.com/attachments/665849154186248202/1022643569699332207/ai.png",
+        img: betterbasket,
         img_loaded: false,
         title: "Better Basket",
         desc: "Algorithms",
@@ -49,7 +57,7 @@ let projectData = [
     },
     {
         url: "https://github.com/IainMcilveen/comp3005pg",
-        img: "https://cdn.discordapp.com/attachments/665849154186248202/754853854108975244/unknown.png",
+        img: database,
         img_loaded: false,
         title: "COMP 3005 Database Project",
         desc: "Web Application",
@@ -58,7 +66,7 @@ let projectData = [
     },
     {
         url: "https://github.com/IainMcilveen/Whos-That-Pokemon",
-        img: "https://cdn.discordapp.com/attachments/665849154186248202/754850059824267344/unknown.png",
+        img: pokemon,
         img_loaded: false,
         title: "Who's That Pokemon",
         desc: "Mobile Web Application",
@@ -67,7 +75,7 @@ let projectData = [
     },
     {
         url: "https://github.com/IainMcilveen/pathfinding-visualizer",
-        img: "https://cdn.discordapp.com/attachments/665849154186248202/754846093556187216/pathfinding-vis-gif.gif",
+        img: pathfinding,
         img_loaded: false,
         title: "Pathfinding visualizer",
         desc: "Algorithms",
@@ -76,7 +84,7 @@ let projectData = [
     },
     {
         url: "https://github.com/IainMcilveen/termtris",
-        img: "https://cdn.discordapp.com/attachments/665849154186248202/935680885414572122/termtris_cropped.gif",
+        img: termtris,
         img_loaded: false,
         title: "TermTris",
         desc: "Terminal Application",
@@ -84,7 +92,7 @@ let projectData = [
     },
     {
         url: "https://github.com/IainMcilveen",
-        img: "https://cdn.discordapp.com/attachments/665849154186248202/1022640579009577060/device.png",
+        img: mctdevice,
         img_loaded: false,
         title: "MCT Device Simulator",
         desc: "Desktop Application",
@@ -92,7 +100,7 @@ let projectData = [
     },
     {
         url: "https://github.com/IainMcilveen/GridWorld",
-        img: "https://cdn.discordapp.com/attachments/665849154186248202/758103143606386688/gridworld.gif",
+        img: gridworld,
         img_loaded: false,
         title: "Grid World",
         desc: "Game",
@@ -101,7 +109,7 @@ let projectData = [
     },
     {
         url: "https://github.com/IainMcilveen/portfolio-v3",
-        img: "https://cdn.discordapp.com/attachments/665849154186248202/754843218356731954/unknown.png",
+        img: portfolio,
         img_loaded: false,
         title: "Portfolio",
         desc: "Web Application",

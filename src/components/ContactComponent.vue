@@ -10,7 +10,7 @@
             <a href="https://drive.google.com/file/d/1P-3NAXoleGS5Vkq5UAQbExlAARSXi4PA/view?usp=share_link"><font-awesome-icon icon="fa-scroll" /></a>
         </div>
         <div class="Contact-Copyright">
-            <p>© 2022 by Iain Mcilveen</p>
+            <p>© 2024 by Iain Mcilveen</p>
         </div>
     </div>
 </template>
