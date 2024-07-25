@@ -36,10 +36,10 @@ export default {
             text: "Projects",
             loc: "#Projects"
         },
-        {
+        /*{
             text:"Photography",
             loc:"#Photography"
-        },
+        },*/
         {
             text:"Contact",
             loc:"#Contact"
